@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target;
-    private Vector3 offsetPosition = new Vector3(0, 2, -2);
+    private Vector3 offsetPosition = new Vector3(0, 3, -2);
     private Space offsetPositionSpace = Space.Self;
     private bool lookAt = true;
 
