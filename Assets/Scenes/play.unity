@@ -25503,14 +25503,6 @@ MonoBehaviour:
   - {x: 16.09, y: -1.26, z: -26.49}
   - {x: 24.42, y: -2.24, z: -15.04}
   randomMM: 0
-  spawnedbones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &1405451779
 PrefabInstance:
   m_ObjectHideFlags: 0

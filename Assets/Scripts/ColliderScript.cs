@@ -13,7 +13,7 @@ public class ColliderScript : MonoBehaviour
     public AudioClip pickupsound;
     private AudioSource audioSource;
     public GameObject presse;
- //   public GameObject Manager;
+
 
 // Update is called once per frame
     void Update()
@@ -35,8 +35,7 @@ public class ColliderScript : MonoBehaviour
                 Destroy(col.gameObject);
                 BoneScore++;
 
-              //  Manager.GetComponent<SpawnPoints>().spawnedbones.Remove(col.gameObject);
-              //  Manager.GetComponent<SpawnPoints>().currentsize--;
+           
 
             Debug.Log("collected!");
                 bonestext.GetComponent<Text>().text = BoneScore.ToString("#");
