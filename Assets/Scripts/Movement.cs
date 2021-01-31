@@ -5,21 +5,28 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    //public Vector3 vektorr;
+    public GameObject Camera;
+    private Camera cam;
+
+    private Vector3 offsetPosition = new Vector3(0, 2, -3);
+    private Quaternion offsetRotation = new Quaternion(0, 0,0, 0 );
     public float speed = 3.0f;
-    //  public float rSpeed = 100.0f;
     public Vector3 rotationSpeed = new Vector3(0, 400, 0);
     private float maxSpeed = 0.5f;
     private Rigidbody rb;
     private Vector2 inputDirection;
 
     private bool isSchmoovin = false;
-    //float moveSpeed = 5.0f;
+
     
     void Start()
     {
-        //vektorr = transform.forward;
+        cam = Camera.GetComponent<Camera>();
         rb = GetComponent<Rigidbody>();
+
+        cam.transform.parent = gameObject.transform;
+        cam.transform.localPosition = offsetPosition;
+        cam.transform.localRotation = offsetRotation;
     }
 
     void Update()
@@ -28,37 +35,6 @@ public class Movement : MonoBehaviour
         inputDirection = inputs.normalized;
     
 
-    //float moveh = Input.GetAxis("Horizontal");
-    //float movev = Input.GetAxis("Vertical");
-    //Vector3 movement = new Vector3(moveh, 0.0f, movev);
-
-    //if (Input.GetKey(KeyCode.W))
-    //{
-    //    //transform.Translate(transform.forward * Time.deltaTime);
-    //    isSchmoovin = true;
-    //    rb.AddForce(movement * speed);
-    //}
-
-    //if (Input.GetKey(KeyCode.S))
-    //{
-    //    //transform.Translate(-transform.forward * Time.deltaTime);
-    //    isSchmoovin = true;
-    //    rb.AddForce(movement * speed);
-    //}
-
-    //if (Input.GetKey(KeyCode.A))
-    //{
-    //    rSpeed = -100.0f;
-    //}
-    //else
-    //{
-    //    rSpeed = 100.0f;
-    //}
-
-    //if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-    //{
-    //    transform.Rotate(Vector3.up * rSpeed * Time.deltaTime);
-    //}
 }
 
     private void FixedUpdate()
