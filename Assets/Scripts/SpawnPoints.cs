@@ -10,7 +10,7 @@ public class SpawnPoints : MonoBehaviour
     private int maxnum;
 
 
-    public List<GameObject> spawnedbones = new List<GameObject>();
+  
 
 
     void Start()
@@ -24,7 +24,7 @@ public class SpawnPoints : MonoBehaviour
 
       randomMM = Random.Range(0, 23);
 
-            spawnedbones[i] = Instantiate(bones[i], spawnPoints[randomMM], Quaternion.identity);
+           Instantiate(bones[i], spawnPoints[randomMM], Quaternion.identity);
          
             maxnum--;
           
