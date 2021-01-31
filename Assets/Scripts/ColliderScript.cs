@@ -9,7 +9,7 @@ public class ColliderScript : MonoBehaviour
 
     void OnCollisionStay(Collision col)
     {
-        if(col.gameObject.name == "rock1")
+        if(col.gameObject.tag == "Collectable")
         {
             //Debug.Log("ouch a rock");
 

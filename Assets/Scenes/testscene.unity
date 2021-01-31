@@ -178,11 +178,11 @@ MonoBehaviour:
   - {fileID: 107153083}
   - {fileID: 107153083}
   spawnPoints:
-  - {x: 9, y: 0, z: 20}
-  - {x: 30, y: 0, z: 0}
-  - {x: 18, y: 0, z: 29}
-  - {x: 0, y: 0, z: 25}
+  - {x: 20, y: 0, z: 20}
+  - {x: 15, y: 0, z: 21}
   - {x: 24, y: 0, z: 12}
+  - {x: 5, y: 0, z: 5}
+  - {x: 2, y: 0, z: 30}
 --- !u!4 &446292028
 Transform:
   m_ObjectHideFlags: 0
@@ -251,6 +251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a2264e7b58f357847aa223266b511dd0, type: 3}
       propertyPath: m_Name
       value: rock1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2264e7b58f357847aa223266b511dd0, type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2264e7b58f357847aa223266b511dd0, type: 3}
