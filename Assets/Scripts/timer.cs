@@ -13,17 +13,17 @@ public class timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        texttext = "hogue is less dissapointed in you";
+        texttext = "hogue is less \n dissapointed in you";
     }
 
     // Update is called once per frame
     void Update()
     {
-        //(if universalvaribles < certainnumber)
-        //  {
-      //  text1.GetComponent<Text>().text = texttext;
-     //   text2.GetComponent<Text>().text = texttext;
-        //  }
-        timetext.GetComponent<Text>().text = universalvaribles.EndTime.ToString("#.0");
+        if( universalvaribles.EndTime < 100)
+        {
+            text1.GetComponent<Text>().text = texttext;
+            text2.GetComponent<Text>().text = texttext;
+        }
+        timetext.GetComponent<Text>().text = universalvaribles.EndTime.ToString("#");
     }
 }

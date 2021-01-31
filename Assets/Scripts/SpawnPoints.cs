@@ -5,13 +5,34 @@ using UnityEngine;
 public class SpawnPoints : MonoBehaviour
 {
     public GameObject[] bones;
-    public Vector3[] spawnPoints;
+    public List<Vector3> spawnPoints = new List<Vector3>();
+    public int randomMM;
+    private int maxnum;
+
+
+    public List<GameObject> spawnedbones = new List<GameObject>();
+
 
     void Start()
     {
-        for(int i = 0; i < 7; i++)
+        
+        maxnum = 23;
+        Random.InitState(System.DateTime.Now.Millisecond);
+
+        for (int i = 0; i < 7; i++)
         {
-            Instantiate(bones[i], spawnPoints[i], Quaternion.identity);
+
+      randomMM = Random.Range(0, 23);
+
+            spawnedbones[i] = Instantiate(bones[i], spawnPoints[randomMM], Quaternion.identity);
+         
+            maxnum--;
+          
+            spawnPoints.Remove(spawnPoints[randomMM]);
+        
+
         }
     }
+
+
 }

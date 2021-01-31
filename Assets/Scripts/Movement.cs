@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//[RequireComponent(typeof(Rigidbody))]
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -31,13 +31,18 @@ public class Movement : MonoBehaviour
         Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         inputDirection = inputs.normalized;
     
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Title");
+        }
 
 }
 
     private void FixedUpdate()
     {
+      
 
-        Quaternion deltaRotation = Quaternion.Euler(inputDirection.x * rotationSpeed * Time.fixedDeltaTime);
+            Quaternion deltaRotation = Quaternion.Euler(inputDirection.x * rotationSpeed * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
         rb.MovePosition(rb.position + transform.forward * speed * inputDirection.y * Time.fixedDeltaTime);
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8343386538446540892}
   - component: {fileID: 6065608246074352790}
   - component: {fileID: -4115167051941785690}
-  - component: {fileID: 1465366252033182511}
+  - component: {fileID: -6145444172840761835}
   m_Layer: 0
   m_Name: Leg_L
   m_TagString: Collectable
@@ -95,11 +95,11 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1465366252033182511
+--- !u!65 &-6145444172840761835
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

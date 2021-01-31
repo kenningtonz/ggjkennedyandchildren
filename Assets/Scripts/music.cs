@@ -6,23 +6,33 @@ public class music : MonoBehaviour
 {
 
 
-    AudioSource audio;
-
+   
+    private AudioSource audioesourse;
 
 
     // Start is called before the first frame update
     void Start()
     {
-      //col = GetComponent<Collider>();
-        audio = GetComponent<AudioSource>();
+
+        audioesourse = GetComponent<AudioSource>();
+       
     }
+ 
     private void OnTriggerEnter(Collider col)
     {
-      audio.Play();
+        if (col.gameObject.tag == "hogue")
+        {
+            audioesourse.Play();
+            Debug.Log("play" + this.name);
+        }
     }
     private void OnTriggerExit(Collider col)
     {
-        audio.Stop();
+        if (col.gameObject.tag == "hogue")
+        {
+            audioesourse.Stop();
+            Debug.Log("stop" + this.name);
+        }
     }
     // Update is called once per frame
     void Update()

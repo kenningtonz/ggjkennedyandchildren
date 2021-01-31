@@ -5,8 +5,8 @@ using UnityEngine;
 public static class universalvaribles 
 {
     private static float endtime;
-   
-public static float EndTime
+
+    public static float EndTime
     {
         get
         {
@@ -18,4 +18,9 @@ public static float EndTime
          }
         
     }
-}
+    
+
+    }
+
+
+
