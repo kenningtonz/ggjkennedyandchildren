@@ -20,4 +20,14 @@ public class scenemanager : MonoBehaviour
     {
         SceneManager.LoadScene("play");
     }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
+
+    public void credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

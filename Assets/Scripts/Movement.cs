@@ -11,13 +11,10 @@ public class Movement : MonoBehaviour
     private Vector3 offsetPosition = new Vector3(0, 2, -3);
     private Quaternion offsetRotation = new Quaternion(0, 0,0, 0 );
     public float speed = 3.0f;
-    public Vector3 rotationSpeed = new Vector3(0, 400, 0);
-    private float maxSpeed = 0.5f;
+    public Vector3 rotationSpeed = new Vector3(0, 1, 0);
+    private float maxSpeed = 0.6f;
     private Rigidbody rb;
     private Vector2 inputDirection;
-
-    private bool isSchmoovin = false;
-
     
     void Start()
     {

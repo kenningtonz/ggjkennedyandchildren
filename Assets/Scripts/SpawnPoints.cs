@@ -9,7 +9,7 @@ public class SpawnPoints : MonoBehaviour
 
     void Start()
     {
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 7; i++)
         {
             Instantiate(bones[i], spawnPoints[i], Quaternion.identity);
         }
